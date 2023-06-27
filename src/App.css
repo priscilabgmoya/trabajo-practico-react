@@ -1,0 +1,13 @@
+#root {
+  max-width: 1280px;
+  padding: 2rem;
+  display: flex;
+justify-content: space-between;
+}
+
+@media all and (max-width: 	768px){
+  #root {
+    display: flex;
+    flex-direction: column;
+  }
+}

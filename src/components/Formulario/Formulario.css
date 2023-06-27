@@ -1,0 +1,24 @@
+.formulario ,.listMessage{
+    border: solid 1px;
+    margin: 5px;
+    padding: 10px;
+    border-radius: 20px;
+}
+#inputMensaje{
+    resize: none;
+}
+ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: antiquewhite;
+}
+li{
+    border: solid 1px;
+    width: 100%;
+    list-style: none;
+    margin: 5px;
+    padding: 20px;
+    background-color: bisque;
+}
