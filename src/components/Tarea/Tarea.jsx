@@ -8,7 +8,7 @@ function Tarea({id , texto, eliminarTarea }){
             <div className="tarea-contenedor-iconos">
                 <button className="tarea-boton-eliminar"
             onClick={() => {eliminarTarea(id)}}
-            >  <AiFillDelete className="tarea-icono" /> </button>
+            >  <AiFillDelete className="tarea-icono" />  </button>
             </div>
         </div>
     ); 
