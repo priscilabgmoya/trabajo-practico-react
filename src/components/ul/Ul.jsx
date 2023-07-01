@@ -8,10 +8,10 @@ function Ul(){
     }
     return(
         <ul className="listadoNavegacion">
-            <Li  texto = 'Inicio' link={`${urlBase()}/`}/>
-            <Li  texto = 'Contactos' link={`${urlBase()}/contacto`}/>
-            <Li  texto = 'Formulario' link={`${urlBase()}/formulario`}/>
-            <Li  texto= 'Lista De Tarea' link= {`${urlBase()}/lista-de-tarea`}/>
+            <Li  texto = 'Inicio' link={`${import.meta.env.VITE_ROUTE}/`}/>
+            <Li  texto = 'Contactos' link={`${import.meta.env.VITE_ROUTE}/contacto`}/>
+            <Li  texto = 'Formulario' link={`${import.meta.env.VITE_ROUTE}/formulario`}/>
+            <Li  texto= 'Lista De Tarea' link= {`${import.meta.env.VITE_ROUTE}/lista-de-tarea`}/>
         </ul>
     ); 
 }
