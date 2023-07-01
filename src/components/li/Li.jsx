@@ -1,9 +1,13 @@
 import React from "react";
+import {Outlet ,Link }from 'react-router-dom'
 import './li.css'; 
 
 function ItemsLi (props){
     return (
-        <li className="itemsNavBar"><a  href={props.link} className="linkNavBar">{props.texto}</a></li>
+        <>
+        <li className="itemsNavBar"><Link  to={props.link} className="linkNavBar">{props.texto}</Link></li>
+        <Outlet />
+        </>
     ); 
 }
 export default ItemsLi; 
