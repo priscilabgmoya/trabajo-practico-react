@@ -1,13 +1,13 @@
 import  {useState} from "react";
 import Form from 'react-bootstrap/Form';
 import ExampleButton from '../button/Button' ; 
-import ExampleModal from '../modal/Modal'; 
 import './Formulario.css'; 
+import Title from "../title/Title";
 
 function Formulario(){
 
 
-    const [message, setMessage] = useState({nombre: '', correo: '' , mensaje: ''}); 
+    const [message, setMessage] = useState({nombre_y_apellido: '', dni: '', correo: '' , mensaje: ''}); 
     const [listMessage, setListMessage] = useState([]); 
     const handlerChange =(event) =>{
         setMessage({...message, [event.target.name] : event.target.value}); 
@@ -15,36 +15,45 @@ function Formulario(){
     };
     const handlerSubmit = (event)=> {
             event.preventDefault(); 
-        const  updateListMessage = [...listMessage, message]; 
-        setListMessage(updateListMessage); 
-        setMessage({nombre: '', correo: '' , mensaje: ''}); 
+            if( message.nombre_y_apellido !== '' || message.correo !== '' || message.mensaje !== ''){
+                const  updateListMessage = [...listMessage, message]; 
+                setListMessage(updateListMessage); 
+                setMessage({nombre_y_apellido: '',  dni: '', correo: '' , mensaje: ''}); 
+                alert('Mensaje Enviado')
+            }else{
+                alert('Error: Falta completar algun campo. No se envio ningun mensaje!'); 
+            }
     
     }
 
     return(
-        <>
+        <div className="container">
+        <Title title='Formulario' />
         <Form   onSubmit={handlerSubmit}  className="formulario">
         <Form.Label  htmlFor="nombre">Nombre:  </Form.Label>
-        <Form.Control type="text" name='nombre' id="nombre" className="inputNombre" onChange={handlerChange} value={message.nombre}/>
+        <Form.Control type="text" name='nombre_y_apellido' id="nombre" className="inputNombre" onChange={handlerChange} value={message.nombre_y_apellido}/> 
+        <Form.Label  htmlFor="nombre">DNI:  </Form.Label>
+        <Form.Control type="text" name='dni' id="nombre" className="inputNombre" onChange={handlerChange} value={message.dni}/>
         <Form.Label  htmlFor="correo">Correo:  </Form.Label>
         <Form.Control type="email" name='correo' id="correo" className="inputCorreo" onChange={handlerChange} value={message.correo}/>
         <Form.Label htmlFor="mensaje">Deje su mensaje: </Form.Label>
         <Form.Control as="textarea" rows={6}  cols={60} name="mensaje" id="inputMensaje" onChange={handlerChange} value={message.mensaje}/>
         <ExampleButton color="secondary" text="Enviar Mensaje" type='submit' />
-        <ExampleModal title='Modal Con Props' text='Esto es un texto con Props'/>
+       
         </Form>
         <div className="listMessage">
             <h2>Mensajes Enviados</h2>
-            <ul>
+            <ul className="ulForm">
                 {
                     listMessage.map((message ,index)=> {
-                        return <li key={index} > {
-                            ( message.nombre !== '' || message.correo !== '' || message.mensaje !== '' ) ? `Nombre: ${message.nombre} - Correo: ${message.correo} -Mensaje: ${message.mensaje}` : 'Error: No se envio ningun mensaje'}</li>
+                        return <li  className="liForm" key={index} > {
+                           `Nombre: ${message.nombre_y_apellido} - DNI: ${message.dni} - Correo: ${message.correo} - Mensaje: ${message.mensaje}` }</li>
                     })
                 }
             </ul>
         </div>
-        </>
+        </div>
+
     );
 }
 

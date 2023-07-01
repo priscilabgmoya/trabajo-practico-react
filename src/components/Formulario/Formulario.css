@@ -3,18 +3,21 @@
     margin: 5px;
     padding: 10px;
     border-radius: 20px;
+    width: 450px;
+    height: auto;
 }
 #inputMensaje{
     resize: none;
 }
-ul{
+
+.ulForm{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: antiquewhite;
 }
-li{
+.liForm{
     border: solid 1px;
     width: 100%;
     list-style: none;

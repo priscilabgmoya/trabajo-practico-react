@@ -1,0 +1,31 @@
+.logoNavBar{
+    width: 50%;
+}
+.logoNavBar img{
+    width:auto;
+    object-fit: cover;
+    height: 55px;
+    border-radius: 300px;
+}
+@media all and (max-width: 	768px){
+    .logoNavBar{
+        width: 16%;
+    }
+    .logoNavBar img{
+        width:auto;
+        object-fit: cover;
+        height: 53px;
+        border-radius: 300px;
+    }
+}
+@media all and (min-width: 	601px) and (max-width: 991px){
+    .logoNavBar{
+        width: 50%;
+    }
+    .logoNavBar img{
+        width:auto;
+        object-fit: cover;
+        height: 70px;
+        border-radius: 300px;
+    }
+}

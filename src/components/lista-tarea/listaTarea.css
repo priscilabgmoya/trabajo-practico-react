@@ -1,0 +1,16 @@
+.contenedorListaTarea{
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    min-height: 500px;
+    border: solid black 1px;
+    border-radius: 20px;
+    margin: 20px auto auto auto;
+    padding: 10px;
+}
+.subtitle{
+    text-align: center;
+}
+.formTarea{
+    margin-top: 10px;
+}

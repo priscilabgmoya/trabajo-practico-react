@@ -1,0 +1,20 @@
+.listadoNavegacion {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: end;
+  padding-top: 10px;
+}
+@media all and (max-width: 768px) {
+  .listadoNavegacion {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding-right: 13px;
+    padding-top: 10px;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 991px) {
+}

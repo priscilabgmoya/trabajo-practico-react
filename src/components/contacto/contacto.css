@@ -1,0 +1,26 @@
+
+.containerInfo {
+  background-color: #fde095;
+  width: 450px;
+  height: 450px;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 20px;
+  border: solid 2px goldenrod;
+}
+.containerInfo h2 {
+  text-align: center;
+  font-size: 30px;
+  color: blue;
+  text-decoration: underline;
+}
+.containerInfo h3 {
+  color: blue;
+  text-decoration: underline;
+  font-size: 20px;
+}
+.containerInfo li {
+  font-size: 15px;
+  color: black;
+  font-weight: 600;
+}
