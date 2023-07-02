@@ -1,15 +1,18 @@
 import React from "react";
+import {Outlet ,Link }from 'react-router-dom';
 import './ul.css'; 
-import Li from '../li/Li'
 
 function Ul(){
     return(
+        <>
         <ul className="listadoNavegacion">
-            <Li  texto = 'Inicio' link={`/`}/>
-            <Li  texto = 'Contactos' link={`/contacto`}/>
-            <Li  texto = 'Formulario' link={`/formulario`}/>
-            <Li  texto= 'Tarea' link= {`/lista-de-tarea`}/>
+        <li className="itemsNavBar"><Link  to={`/`}className="linkNavBar">{'Inicio'}</Link></li>
+        <li className="itemsNavBar"><Link  to={`/contacto`} className="linkNavBar">{'Contactos'}</Link></li>
+        <li className="itemsNavBar"><Link  to={`/formulario`} className="linkNavBar">{'Formulario'}</Link></li>
+        <li className="itemsNavBar"><Link  to={`/lista-de-tarea`} className="linkNavBar">{'Tarea'}</Link></li>
         </ul>
+        <Outlet />
+        </>
     ); 
 }
 export default Ul; 
