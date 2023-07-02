@@ -1,6 +1,6 @@
 .itemsNavBar{
     list-style: none;
-    margin: 15px;
+    margin: 0px 15px;
 }
 .linkNavBar{
     font-size: 15px;
@@ -10,8 +10,11 @@
 }
 @media all and (max-width: 	768px){
     .linkNavBar{
-        font-size: 13px;
-        text-decoration: none;
+        text-decoration: underline;
         color: black;
+    }
+    .itemsNavBar{
+        list-style: none;
+        margin: 0px 3px;
     }
 }

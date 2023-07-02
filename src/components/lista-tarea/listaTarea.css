@@ -6,11 +6,19 @@
     border: solid black 1px;
     border-radius: 20px;
     margin: 20px auto auto auto;
-    padding: 10px;
+    padding: 15px;
 }
 .subtitle{
     text-align: center;
 }
 .formTarea{
     margin-top: 10px;
+}
+.listTareas{
+    padding-top: 20px;
+}
+@media all and (max-width: 768px) {
+    .contenedorListaTarea h4{
+        font-size: 20px;
+    }
 }

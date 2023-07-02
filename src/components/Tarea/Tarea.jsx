@@ -1,4 +1,5 @@
 import { AiFillDelete } from "react-icons/ai";
+import './tarea.css'; 
 function Tarea({id , texto, eliminarTarea }){
     return (
         <div className= {"tarea-contenedor" }>

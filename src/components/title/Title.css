@@ -9,3 +9,9 @@
       text-decoration: underline;
       padding: auto;
   }
+  @media all and (max-width: 	768px){
+    .title h1{
+        font-size: 20px;
+        text-align: center;
+    }
+  }
